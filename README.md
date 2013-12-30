@@ -9,8 +9,8 @@ D'apres [Sandi Metz'](http://rubyrogues.com/087-rr-book-clubpractical-object-ori
 
   1. Une classe ne doit pas dépasser **100 lignes** de code.
   2. Une méthode ne doit pas dépasser **5 lignes** de code.
-  3. Une méthode ne doit pas avoir plus de **4 paramètres**.[^1]
-  4. Un controlleur doit instancier **1 seul objet**.[^2]
+  3. Une méthode ne doit pas avoir plus de **4 paramètres**. [^1]
+  4. Un controlleur doit instancier **1 seul objet**. [^2]
 
 [^1]: Hash comprit
 [^2]: Utiliser le pattern **Facade** ou **Présenteur**
@@ -40,8 +40,8 @@ Si on utilise plusieurs modèles, on ne doit pas accéder à la classe du modèl
 
 ## Conventions et bonnes pratiques
 
-* [Le guide Ruby](/ruby-style-guide.md)
-* [Le guide Ruby on Rails](/rails-style-guide.md)
+* [Le guide Ruby](/ruby-style-guide.md) [^3] 
+* [Le guide Ruby on Rails](/rails-style-guide.md) [^4] 
 
-
-
+[^3]: D'après [porecreat](https://github.com/porecreat/ruby-style-guide/blob/master/README-frFR.md)
+[^4]: D'après [bbatsov](https://github.com/bbatsov/rails-style-guide)
