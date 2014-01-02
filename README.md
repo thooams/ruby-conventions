@@ -16,7 +16,7 @@ D'apres [Sandi Metz'](http://rubyrogues.com/087-rr-book-clubpractical-object-ori
 [^2]: Utiliser le pattern **Facade** ou **Présenteur**
 
 
-## Règles pour Ruby on Rails
+## Explications pour Ruby on Rails
 
 D'après [Guirec Corbel](http://gcorbel.github.io/blog/blog/2013/10/12/quand-jutilise-des-helpers-des-partials-des-presenters-et-des-decorators/) :
 
@@ -42,6 +42,8 @@ Si on utilise plusieurs modèles, on ne doit pas accéder à la classe du modèl
 
 * [Le guide Ruby](/ruby-style-guide.md) [^3] 
 * [Le guide Ruby on Rails](/rails-style-guide.md) [^4] 
+* [Le guide de Bonne Pratiques](/bonnes-pratiques.md) [^5]
 
 [^3]: D'après [porecreat](https://github.com/porecreat/ruby-style-guide/blob/master/README-frFR.md)
 [^4]: D'après [bbatsov](https://github.com/bbatsov/rails-style-guide)
+[^5]: D'après [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/)via [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/)
