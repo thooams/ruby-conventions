@@ -46,4 +46,4 @@ Si on utilise plusieurs modèles, on ne doit pas accéder à la classe du modèl
 
 [^3]: D'après [porecreat](https://github.com/porecreat/ruby-style-guide/blob/master/README-frFR.md)
 [^4]: D'après [bbatsov](https://github.com/bbatsov/rails-style-guide)
-[^5]: D'après [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/)via [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/)
+[^5]: D'après [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/) via [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/)
