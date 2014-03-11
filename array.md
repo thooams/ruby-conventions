@@ -1,6 +1,6 @@
 # Array
 
-## Comment vérifier si un tableau contient tous les élément d’un autre ?
+## Comment vérifier si un tableau contient tous les éléments d’un autre ?
 
 Vérifier que tous les emails importés existent dans une liste de contact.
 
@@ -58,7 +58,7 @@ Référence : [Set Union](http://www.ruby-doc.org/core-2.1.0/Array.html#method-i
 
 ## Comment toujours récupérer un tableau ?
 
-Dans une méthode on manipule des produits. A la fin de cette méthode on retourne un ou plusieurs produit.
+Dans une méthode on manipule des produits. A la fin de cette méthode on retourne un ou plusieurs produits.
 Mais lorsque l'on n’en récupère un seul, celui-ci n'est pas un tableau.
 On peut traiter les deux cas de manière très élégante avec Array() or [*]:
 
