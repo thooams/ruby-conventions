@@ -38,10 +38,14 @@ Les Decorators doivent interagir avec un seul modèle et ne doivent pas avoir de
 
 Si on utilise plusieurs modèles, on ne doit pas accéder à la classe du modèle directement dans la vue. Il est préférable d'utiliser la fonction de Draper [decorates_finders](https://github.com/drapergem/draper#decorated-finders).
 
+### Astuces
+
+* [les tableaux](/array.md)
+
 ## Conventions et bonnes pratiques
 
-* [Le guide Ruby](/ruby-style-guide.md) [^3] 
-* [Le guide Ruby on Rails](/rails-style-guide.md) [^4] 
+* [Le guide Ruby](/ruby-style-guide.md) [^3]
+* [Le guide Ruby on Rails](/rails-style-guide.md) [^4]
 * [Le guide de Bonne Pratiques](/bonnes-pratiques.md) [^5]
 
 [^3]: D'après [porecreat](https://github.com/porecreat/ruby-style-guide/blob/master/README-frFR.md)
