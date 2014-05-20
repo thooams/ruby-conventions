@@ -44,9 +44,9 @@ Si on utilise plusieurs modèles, on ne doit pas accéder à la classe du modèl
 
 ## Conventions et bonnes pratiques
 
-* [Le guide Ruby](/ruby-style-guide.md) [^3]
-* [Le guide Ruby on Rails](/rails-style-guide.md) [^4]
-* [Le guide de Bonne Pratiques](/bonnes-pratiques.md) [^5]
+* [Le guide Ruby](/ruby/ruby-style-guide.md) [^3]
+* [Le guide Ruby on Rails](/ruby/rails-style-guide.md) [^4]
+* [Le guide de Bonne Pratiques](/ruby/bonnes-pratiques.md) [^5]
 
 [^3]: D'après [porecreat](https://github.com/porecreat/ruby-style-guide/blob/master/README-frFR.md)
 [^4]: D'après [bbatsov](https://github.com/bbatsov/rails-style-guide)
