@@ -3,6 +3,8 @@ ruby-conventions
 
 Ruby conventions and style guide in French
 
+[TOC]
+
 ## Règles pour Ruby et Ruby on Rails
 
 D'apres [Sandi Metz'](http://rubyrogues.com/087-rr-book-clubpractical-object-oriented-design-in-ruby-with-sandi-metz/) :
@@ -44,10 +46,12 @@ Si on utilise plusieurs modèles, on ne doit pas accéder à la classe du modèl
 
 ## Conventions et bonnes pratiques
 
-* [Le guide Ruby](/ruby/ruby-style-guide.md) [^3]
-* [Le guide Ruby on Rails](/ruby/rails-style-guide.md) [^4]
-* [Le guide de Bonne Pratiques](/ruby/bonnes-pratiques.md) [^5]
+* [Le guide Ruby](/Ruby/ruby-style-guide.md) [^3]
+* [Le guide Ruby on Rails](/Ruby/rails-style-guide.md) [^4]
+* [Le guide de Bonne Pratiques](/Ruby/bonnes-pratiques.md) [^5]
+* [Le guide de Bonne Pratiques Css](/Css/bonnes-pratiques-css.md) [^6]
 
 [^3]: D'après [porecreat](https://github.com/porecreat/ruby-style-guide/blob/master/README-frFR.md)
 [^4]: D'après [bbatsov](https://github.com/bbatsov/rails-style-guide)
 [^5]: D'après [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/) via [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/)
+[^6]: D'après [csswizardry](https://github.com/csswizardry/CSS-Guidelines)
