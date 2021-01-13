@@ -164,7 +164,7 @@ Le modèle de visiteur est utilisé pour séparer un ensemble relativement compl
 * [Le guide de Bonne Pratiques](/Ruby/bonnes-pratiques.md) [⁵](#source-5)
 * [Le guide de Bonne Pratiques Css](/Css/bonnes-pratiques-css.md) [⁶](#source-6)
 
-*<a name="source-3>³</a>: D'après [porecreat](https://github.com/porecreat/ruby-style-guide/blob/master/README-frFR.md)*
-*<a name="source-4>⁴</a>: D'après [bbatsov](https://github.com/bbatsov/rails-style-guide)*
-*<a name="source-5>⁵</a>: D'après [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/) via [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/)*
-*<a name="source-6>⁶</a>: D'après [csswizardry](https://github.com/csswizardry/CSS-Guidelines)*
+*<a name="source-3">³</a>: D'après [porecreat](https://github.com/porecreat/ruby-style-guide/blob/master/README-frFR.md)*\
+*<a name="source-4">⁴</a>: D'après [bbatsov](https://github.com/bbatsov/rails-style-guide)*\
+*<a name="source-5">⁵</a>: D'après [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/) via [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/)*\
+*<a name="source-6">⁶</a>: D'après [csswizardry](https://github.com/csswizardry/CSS-Guidelines)*
