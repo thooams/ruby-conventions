@@ -12,8 +12,64 @@ D'apres [Sandi Metz'](http://rubyrogues.com/087-rr-book-clubpractical-object-ori
 [^1]: Hash comprit
 [^2]: Utiliser le pattern **Facade** ou **Présenteur**
 
+## Le principe S.O.L.I.D
 
-## Le Design Pattern
+### Responsabilité unique (Single responsibility principle)
+Une seule responsabilité pour une classe ou une méthode.
+
+Prenons l'exemple d'un module qui compile et imprime un rapport. Imaginons que ce module peut changer pour deux raisons. D'abord, le contenu du rapport peut changer. Ensuite, le format du rapport peut changer. Ces deux choses changent pour des causes différentes; l'une substantielle, et l'autre cosmétique. Le principe de responsabilité unique dit que ces deux aspects du problème ont deux responsabilités distinctes, et devraient donc être dans des classes ou des modules séparés. Ce serait une mauvaise conception de coupler ces deux choses dans une même classe.
+
+La raison pour laquelle il est important de garder une classe axée sur une seule préoccupation est que cela rend la classe plus robuste. En continuant avec l'exemple précédent, s'il y a un changement dans le processus de compilation du rapport, il y a un plus grand danger que le code d'impression se casse si elle fait partie de la même classe.
+
+La responsabilité est définie comme une tâche assignée à un acteur unique2
+
+### Ouvert/fermé (Open/closed principle)
+Une entité applicative (class, method, module ...) doit être **ouverte à l'extension**, mais **fermée à la modification**.
+
+En programmation orientée objet, le principe ouvert/fermé (open/closed principle) affirme qu'une classe doit être à la fois ouverte (à l'extension) et fermée (à la modification). Il correspond au « O » de l'acronyme SOLID. « Ouverte » signifie qu'elle a la capacité d'être étendue. « Fermée » signifie qu'elle ne peut être modifiée que par extension, sans modification de son code source.
+
+L'idée est qu'une fois qu'une classe a été approuvée via des revues de code, des tests unitaires et d'autres procédures de qualification, elle ne doit plus être modifiée mais seulement étendue.
+
+En pratique, le principe ouvert/fermé oblige à faire bon usage de l'abstraction et du polymorphisme.
+
+### Substitution de Liskov (Liskov substitution principle)
+Une instance de type T doit pouvoir être remplacée par une instance de type G, tel que G sous-type de T, sans que cela ne modifie la cohérence du programme.
+
+#### Principe
+Le principe de Liskov impose des restrictions sur les signatures sur la définition des sous-types :
+
+- Contravariance des arguments de méthode dans le sous-type.
+- Covariance du type de retour dans le sous-type.
+- Aucune nouvelle exception ne doit être générée par la méthode du sous-type, sauf si celles-ci sont elles-mêmes des sous-types des exceptions levées par la méthode du supertype.
+
+On définit également un certain nombre de conditions comportementales (voir la section Conception par contrat).
+
+#### Conception par contrat
+Le principe de substitution de Liskov est étroitement relié à la méthodologie de programmation par contrat aboutissant à des restrictions qui spécifient la manière dont les contrats peuvent interagir avec les mécanismes d'héritage :
+
+- Les préconditions ne peuvent pas être renforcées dans une sous-classe. Cela signifie que vous ne pouvez pas avoir une sous-classe avec des préconditions plus fortes que celles de sa superclasse ;
+- Les postconditions ne peuvent pas être affaiblies dans une sous-classe. Cela signifie que vous ne pouvez pas avoir une sous-classe avec des postconditions plus faibles que celles de sa superclasse.
+
+De plus, le principe de substitution de Liskov implique que des exceptions d'un type nouveau ne peuvent pas être levées par des méthodes de la sous-classe, sauf si ces exceptions sont elles-mêmes des sous-types des exceptions lancées par les méthodes de la superclasse.
+
+Une fonction utilisant la connaissance de la hiérarchie de classe viole le principe car elle utilise une référence à la classe de base, mais doit aussi avoir connaissance des sous-classes. Une telle fonction viole le principe ouvert/fermé car elle doit être modifiée quand on crée une classe dérivée de la classe de base.
+
+### Ségrégation des interfaces (Interface segregation principle)
+Plusieurs interfaces spécifiques pour chaque client plutôt qu'une seule interface générale.
+Aucun client ne devrait dépendre de méthodes qu'il n'utilise pas. 
+Il faut donc diviser les interfaces volumineuses en plus petites plus spécifiques, de sorte que les clients n'ont accès qu'aux méthodes intéressantes pour eux. Ces interfaces rétrécies sont également appelés interfaces de rôle.
+Tout ceci est destiné à maintenir un système à couplage faible, donc plus facile à refactoriser.
+
+### Inversion des dépendances (Dependency inversion principle)
+Il faut dépendre des abstractions, pas des implémentations
+Les deux assertions de ce principe sont :
+
+- Les modules de haut niveau ne doivent pas dépendre des modules de bas niveau. Les deux doivent dépendre d'abstractions.
+- Les abstractions ne doivent pas dépendre des détails. Les détails doivent dépendre des abstractions.
+
+[Source](https://fr.wikipedia.org/wiki/SOLID_(informatique))
+
+## Les Design Patterns
 
 D'après le Gang des quatres (Gang of Four) il existe plusieurs types de patterns dans la conception de logiciels orientée objet :
 
