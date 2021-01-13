@@ -1,11 +1,6 @@
-ruby-conventions
-================
+# Les bonnes pratiques en Ruby
 
-Ruby conventions and style guide in French
-
-[TOC]
-
-## Règles pour Ruby et Ruby on Rails
+## La conception de classes et méthodes en Ruby
 
 D'apres [Sandi Metz'](http://rubyrogues.com/087-rr-book-clubpractical-object-oriented-design-in-ruby-with-sandi-metz/) :
 
@@ -18,27 +13,89 @@ D'apres [Sandi Metz'](http://rubyrogues.com/087-rr-book-clubpractical-object-ori
 [^2]: Utiliser le pattern **Facade** ou **Présenteur**
 
 
-## Explications pour Ruby on Rails
+## Le Design Pattern
 
-D'après [Guirec Corbel](http://gcorbel.github.io/blog/blog/2013/10/12/quand-jutilise-des-helpers-des-partials-des-presenters-et-des-decorators/) :
+D'après le Gang des quatres (Gang of Four) il existe plusieurs types de patterns dans la conception de logiciels orientée objet :
 
-###Les Helpers
+### Les patterns de création (Creational Pattern)
+Le premier type de motif est le motif de création. Les motifs de création permettent d'instancier des objets individuels ou des groupes d'objets liés. Il existe cinq modèles de ce type :
 
-Les Helpers sont des méthodes génériques qui peuvent être utilisées pour différents types d’objet. On peut créer des helpers du style ```link_to_update```, ```big_image```, ```styled_form```, etc. Ces méthodes créent du code html avec, par exemple, un style css ou un texte standard.
+#### Abstract Factory (Usine abstraite)
+Le modèle d'usine abstraite est utilisé pour fournir à un client un ensemble d'objets liés ou dépendants. Les "familles" d'objets créées par la fabrique sont déterminées au moment de l'exécution.
 
-###Les Partials
+#### Builder (Constructeur)
+Le modèle builder est utilisé pour créer des objets complexes avec des parties constitutives qui doivent être créées dans le même ordre ou en utilisant un algorithme spécifique. Une classe externe contrôle l'algorithme de construction.
 
-Les Partials sont utilisés pour diviser une grosse vue dans de plus petites parties logiques. On peut avoir un partial ```side_menu```, ```comment_list```, ```header```, etc.
+#### Factory Method (Méthode de l'usine)
+Le modèle d'usine est utilisé pour remplacer les constructeurs de classe, en abstraction du processus de génération d'objets afin que le type de l'objet instancié puisse être déterminé au moment de l'exécution.
 
-###Les Presenters
+#### Prototype (Prototype)
+Le modèle prototype est utilisé pour instancier un nouvel objet en copiant toutes les propriétés d'un objet existant, créant ainsi un clone indépendant. Cette pratique est particulièrement utile lorsque la construction d'un nouvel objet est inefficace.
 
-Les Presenters sont créés pour des requêtes plus compliquées avec un modèle ou plus. On peut avoir des presenters comme ```@page_presenter.page_in_category(ruby_category)``` ou ```@user_presenter.user_following(an_article)```.
+#### Singleton (Singleton)
+Le modèle singleton garantit qu'un seul objet d'une classe particulière est créé. Toutes les autres références aux objets de la classe singleton se rapportent à la même instance sous-jacente.
 
-###Les Decorators
+### Structural Patterns (Modèles structurels)
+Le deuxième type de modèle de conception est le modèle structurel. Les modèles structurels permettent de définir les relations entre les classes ou les objets.
 
-Les Decorators doivent interagir avec un seul modèle et ne doivent pas avoir de paramètres(si possible). On peut codder : ```user.full_name```, ```page.big_title``` ou ```category.permalink```. Utilisez la gem [Draper](https://github.com/drapergem/draper).
+#### Adpater (Adaptateur)
+Le modèle d'adaptateur est utilisé pour fournir un lien entre deux types autrement incompatibles en enveloppant l'"adaptateur" avec une classe qui prend en charge l'interface requise par le client.
 
-Si on utilise plusieurs modèles, on ne doit pas accéder à la classe du modèle directement dans la vue. Il est préférable d'utiliser la fonction de Draper [decorates_finders](https://github.com/drapergem/draper#decorated-finders).
+#### Bridge (Pont)
+Le modèle de pont est utilisé pour séparer les éléments abstraits d'une classe des détails de l'implémentation, fournissant ainsi le moyen de remplacer les détails de l'implémentation sans modifier l'abstraction.
+
+#### Composite (Composite)
+Le modèle composite est utilisé pour créer des structures arborescentes hiérarchiques et récursives d'objets apparentés où tout élément de la structure peut être accessible et utilisé de manière standard.
+
+#### Decorator (Décorateur)
+Le motif décorateur est utilisé pour étendre ou modifier la fonctionnalité des objets en cours d'exécution en les enveloppant dans un objet d'une classe décorateur. Cela offre une alternative flexible à l'utilisation de l'héritage pour modifier le comportement.
+
+#### Facade (Façade)
+Le modèle de façade est utilisé pour définir une interface simplifiée vers un sous-système plus complexe.
+
+#### Flyweight (Masse volante)
+Le modèle de poids mouche est utilisé pour réduire l'utilisation de la mémoire et des ressources pour des modèles complexes contenant plusieurs centaines, milliers ou centaines de milliers d'objets similaires.
+
+#### Proxy (Proxy)
+Le modèle de proxy est utilisé pour fournir un objet de substitution ou de remplacement, qui fait référence à un objet sous-jacent. Le proxy fournit la même interface publique que la classe de sujets sous-jacente, ajoutant un niveau d'indirection en acceptant les requêtes d'un objet client et en les transmettant à l'objet sujet réel si nécessaire.
+
+### Les patterns de comportement (Behavioural Patterns)
+Le dernier type de modèle de conception est le modèle comportemental. Les modèles comportementaux définissent les modes de communication entre les classes et les objets.
+
+#### Chain of Responsibility (Chaîne de responsabilité)
+Le modèle de chaîne de responsabilité est utilisé pour traiter des demandes variées, chacune d'entre elles pouvant être traitée par un gestionnaire différent.
+
+#### Command (Commandement)
+Le modèle de commande est utilisé pour exprimer une demande, y compris l'appel à effectuer et tous ses paramètres requis, dans un objet de commande. La commande peut ensuite être exécutée immédiatement ou conservée pour une utilisation ultérieure.
+
+#### Interpreter (Interprète)
+Le modèle d'interprétation est utilisé pour définir la grammaire des instructions qui font partie d'une langue ou d'une notation, tout en permettant d'étendre facilement la grammaire.
+
+#### Iterator (Itérateur)
+Le modèle d'itérateur est utilisé pour fournir une interface standard permettant de parcourir une collection d'éléments dans un objet global sans avoir besoin de comprendre sa structure sous-jacente.
+
+#### Mediator (Médiateur)
+Le modèle de médiateur est utilisé pour réduire le couplage entre les classes qui communiquent entre elles. Au lieu que les classes communiquent directement, et nécessitent donc une connaissance de leur mise en œuvre, les classes envoient des messages via un objet médiateur.
+
+#### Memento (Mémento)
+Le modèle memento est utilisé pour capturer l'état actuel d'un objet et le stocker de manière à ce qu'il puisse être restauré ultérieurement sans enfreindre les règles d'encapsulation.
+
+#### Observer (Observateur)
+Le modèle observateur est utilisé pour permettre à un objet de publier les changements de son état. Les autres objets s'abonnent pour être immédiatement informés de toute modification.
+
+#### State (État)
+Le modèle d'état est utilisé pour modifier le comportement d'un objet lorsque son état interne change. Le modèle permet à la classe d'un objet de changer apparemment au moment de l'exécution.
+
+#### Strategy (Stratégie)
+Le modèle de stratégie est utilisé pour créer une famille d'algorithmes interchangeables à partir de laquelle le processus requis est choisi au moment de l'exécution.
+
+#### Template Method (Méthode du modèle)
+Le modèle de la méthode des modèles est utilisé pour définir les étapes de base d'un algorithme et permettre la modification de la mise en œuvre des différentes étapes.
+
+#### Visitor (Visiteur)
+Le modèle de visiteur est utilisé pour séparer un ensemble relativement complexe de classes de données structurées de la fonctionnalité qui peut être exécutée sur les données que l'on veut traiter.
+
+[Source](http://www.blackwasp.co.uk/gofpatterns.aspx)
 
 ### Astuces
 
