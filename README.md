@@ -94,7 +94,7 @@ Le modèle singleton garantit qu'un seul objet d'une classe particulière est cr
 ### Structural Patterns (Modèles structurels)
 Le deuxième type de modèle de conception est le modèle structurel. Les modèles structurels permettent de définir les relations entre les classes ou les objets.
 
-#### Adpater (Adaptateur)
+#### Adapter (Adaptateur)
 Le modèle d'adaptateur est utilisé pour fournir un lien entre deux types autrement incompatibles en enveloppant l'"adaptateur" avec une classe qui prend en charge l'interface requise par le client.
 
 #### Bridge (Pont)
