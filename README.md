@@ -6,11 +6,11 @@ D'apres [Sandi Metz'](http://rubyrogues.com/087-rr-book-clubpractical-object-ori
 
   1. Une classe ne doit pas dépasser **100 lignes** de code.
   2. Une méthode ne doit pas dépasser **5 lignes** de code.
-  3. Une méthode ne doit pas avoir plus de **4 paramètres**. [^1]
-  4. Un controlleur doit instancier **1 seul objet**. [^2]
+  3. Une méthode ne doit pas avoir plus de **4 paramètres**. [¹](#source-1)
+  4. Un controlleur doit instancier **1 seul objet**. [²](#source-2)
 
-[^1]: Hash comprit
-[^2]: Utiliser le pattern **Facade** ou **Présenteur**
+*<a name="source-1">¹</a> Hash comprit*\
+*<a name="source-2">²</a> Utiliser le pattern **Facade** ou **Présenteur*</a>**
 
 ## Le principe S.O.L.I.D
 
@@ -159,12 +159,12 @@ Le modèle de visiteur est utilisé pour séparer un ensemble relativement compl
 
 ## Conventions et bonnes pratiques
 
-* [Le guide Ruby](/Ruby/ruby-style-guide.md) [^3]
-* [Le guide Ruby on Rails](/Ruby/rails-style-guide.md) [^4]
-* [Le guide de Bonne Pratiques](/Ruby/bonnes-pratiques.md) [^5]
-* [Le guide de Bonne Pratiques Css](/Css/bonnes-pratiques-css.md) [^6]
+* [Le guide Ruby](/Ruby/ruby-style-guide.md) [³](#source-3)
+* [Le guide Ruby on Rails](/Ruby/rails-style-guide.md) [⁴](#source-4)
+* [Le guide de Bonne Pratiques](/Ruby/bonnes-pratiques.md) [⁵](#source-5)
+* [Le guide de Bonne Pratiques Css](/Css/bonnes-pratiques-css.md) [⁶](#source-6)
 
-[^3]: D'après [porecreat](https://github.com/porecreat/ruby-style-guide/blob/master/README-frFR.md)
-[^4]: D'après [bbatsov](https://github.com/bbatsov/rails-style-guide)
-[^5]: D'après [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/) via [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/)
-[^6]: D'après [csswizardry](https://github.com/csswizardry/CSS-Guidelines)
+*<a name="source-3>³</a>: D'après [porecreat](https://github.com/porecreat/ruby-style-guide/blob/master/README-frFR.md)*
+*<a name="source-4>⁴</a>: D'après [bbatsov](https://github.com/bbatsov/rails-style-guide)*
+*<a name="source-5>⁵</a>: D'après [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/) via [Elevated Abstractions](http://elevatedabstractions.wordpress.com/2013/07/20/why-i-avoid-private-methods/)*
+*<a name="source-6>⁶</a>: D'après [csswizardry](https://github.com/csswizardry/CSS-Guidelines)*
