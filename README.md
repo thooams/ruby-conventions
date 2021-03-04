@@ -153,6 +153,183 @@ Le modèle de visiteur est utilisé pour séparer un ensemble relativement compl
 
 [Source](http://www.blackwasp.co.uk/gofpatterns.aspx)
 
+
+### Préférer la composition à l'héritage ou aux mixins
+
+**Problèmatique:**
+
+![inheritance](https://mjk.space/images/blog/inheritance/inheritance_level3.png)
+
+#### L'héritage
+
+```ruby
+class Vehicle
+  def run
+    refill
+    load
+  end
+end
+
+class Car < Vehicle
+  def load
+    # load passengers
+  end
+end
+
+class Truck < Vehicle
+  def load
+    # load cargo
+  end
+end
+
+class PetrolCar < Car
+  def refill
+    # refill with fuel
+  end
+end
+
+class ElectricCar < Car
+  def refill
+    # refill with electricity
+  end
+end
+
+class PetrolTruck < Truck
+  def refill
+    # refill with fuel (code duplication!)
+  end
+end
+
+class ElectricTruck < Truck
+  def refill
+    # refill with electricity (code duplication!)
+  end
+end
+```
+
+L'héritage se complexifie au fur et à mesure que l'on créé des enfants.
+
+#### Les Mixins
+
+```ruby
+module Vehicle
+  def run
+    refill
+    load
+  end
+end
+
+module Truck
+  def load
+    # load cargo
+  end
+end
+
+module Car
+  def load
+    # load passengers
+  end
+end
+
+module ElectricEngine
+  def refill
+    # refill with electricity
+  end
+end
+
+module PetrolEngine
+  def refill
+    # refill with petrol
+  end
+end
+```
+
+```ruby
+class PetrolCar
+  include Vehicle
+  include Car
+  include PetrolEngine
+end
+
+class ElectricCar
+  include Vehicle
+  include Car
+  include ElectricEngine
+end
+
+class PetrolTruck
+  include Vehicle
+  include Truck
+  include PetrolEngine
+end
+
+class ElectricTruck
+  include Vehicle
+  include Truck
+  include ElectricEngine
+end
+```
+
+Le problème avec le système de mixins c'est que que les methodes de chaque mixins peuvent s'interférer en portant le même nom.
+
+#### La composition
+
+![la composition](https://mjk.space/images/blog/inheritance/composition.png)
+
+```ruby
+class Vehicle
+  def initialize(engine:, body:)
+    @engine = engine
+    @body = body
+  end
+
+  def run
+    @engine.refill
+    @body.load
+  end
+end
+```
+```ruby
+class ElectricEngine
+  def refill
+    # refill with electricity
+  end
+end
+
+class PetrolEngine
+  def refill
+    # refill with petrol
+  end
+end
+
+class TruckBody
+  def load
+    # load cargo
+  end
+end
+
+class CarBody
+  def load
+    # load passengers
+  end
+end
+```
+```ruby
+petrol_car = Vehicle.new(engine: PetrolEngine.new, body: CarBody.new)
+electric_car = Vehicle.new(engine: ElectricEngine.new, body: CarBody.new)
+petrol_truck = Vehicle.new(engine: PetrolEngine.new, body: TruckBody.new)
+electric_truck = Vehicle.new(engine: ElectricEngine.new, body: TruckBody.new)
+```
+
+Ici la composition permet :
+
+- Un faible couplage (un objet -> une logique)
+- Une grande cohésion (permet de garder une logique commune)
+- Une plus grande maintenabilité
+- Une simplification à l'extension
+
+[source](https://mjk.space/how-to-avoid-inheritance-in-ruby/)
+
 ### Astuces
 
 * [les tableaux](/array.md)
