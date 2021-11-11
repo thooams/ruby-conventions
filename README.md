@@ -153,6 +153,7 @@ Le modèle de visiteur est utilisé pour séparer un ensemble relativement compl
 
 [Source](http://www.blackwasp.co.uk/gofpatterns.aspx)
 
+Exemples en crystal : https://github.com/crystal-community/crystal-patterns
 
 ### Préférer la composition à l'héritage ou aux mixins
 
